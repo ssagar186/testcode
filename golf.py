@@ -7,7 +7,7 @@ class Golf_check:
         self.temperature_kelvin = None
         self.get_temp()
     def get_temp(self):
-        http_request = requests.post('https://api.openweathermap.org/data/2.5/forecast?id=4180439&appid=7e8bc371335cb8fe11adbc293f3f480c')
+        http_request = requests.post('https://api.openweathermap.org/data/2.5/forecast?id=<token>')
         weather_data = http_request.text
         weather_data = json.loads(weather_data)
         print(weather_data)
